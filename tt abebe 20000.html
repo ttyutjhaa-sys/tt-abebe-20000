@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Frame Builder</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f5f0;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #1a1a1a;
+            color: gold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: gold;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 40px;
+        }
+
+        #home {
+            height: 90vh;
+            background: url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        #home h1 {
+            font-size: 60px;
+        }
+
+        h2 {
+            color: #d4a017;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        /* Projects grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* Skills bar */
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        .skill-level {
+            height: 12px;
+            border-radius: 5px;
+            background: gold;
+            width: 0;
+            animation: loadSkill 2s forwards;
+        }
+
+        @keyframes loadSkill {
+            from { width: 0; }
+        }
+
+        /* Contact form */
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: gold;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: gold;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Golden Frame Builder</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <h1>We Build Golden Quality Frames</h1>
+    </section>
+
+    <!-- About Us -->
+     <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Golden Frame Builder specializes in crafting premium, high-quality custom frames.
+            Our team blends modern design with handcrafted artistry to deliver elegant and durable frame solutions.
+        </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Our Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Modern Gold Frame</h3>
+                <p>Elegant handcrafted gold frame design.</p>
+            </div>
+            <div class="project-card">
+                <h3>Wooden Luxury Frame</h3>
+                <p>Premium wood craftsmanship built to last.</p>
+            </div>
+            <div class="project-card">
+                <h3>Classic Art Frame</h3>
+                <p>Perfect for museums and galleries.</p>
+            </div>
+        </div>
+    </section>
+    
+ <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Git</div>
+        </div>
+    </section>
+ 
+
+    <!-- Blog -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Coming soon… We will share expert insights, framing tips, and behind-the-scenes craftsmanship.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="5" placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+  <!-- Google Map -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0198475104273!2d-122.41941548468142!3d37.77492927975968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808e0a2f8b0b%3A0x6e7b9c1c4e7bb5c1!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+</body>
+</html>
+    <footer>
+        © 2025 Golden Frame Builder — Crafted With Excellence
+    </footer>
+
+</body>
+</html>
